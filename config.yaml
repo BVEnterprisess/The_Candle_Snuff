@@ -1,0 +1,19 @@
+model:
+  name: "bert-base-uncased"  # Example model for web scraping classification, change as needed
+  num_labels: 2  # For binary classification (useful for scraping or not), adjust for your task
+
+training:
+  batch_size: 16
+  learning_rate: 2e-5
+  num_epochs: 3
+  weight_decay: 0.01
+  warmup_steps: 500
+
+data:
+  train_path: "data/train.csv"
+  val_path: "data/val.csv"
+  test_path: "data/test.csv"
+
+output:
+  model_save_path: "models/fine_tuned_model"
+  logs_path: "logs/"
